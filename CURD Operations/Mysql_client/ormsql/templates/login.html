@@ -1,0 +1,35 @@
+<span ><h2 style="background: linear-gradient(to top right,red,rgb(108, 16, 212));color:white; text-align: center; width: 100%;">Welcome To Mysql Client Tutorial</h2></span>
+<span style="font-size: 25px;"></span>
+    <a href="/">Home</a>
+    <a href="reg">Register</a>
+    <a href="login">Login</a>
+    {% if user.is_authenticated %}
+
+    <a href="auth1">Autherise User 1</a>
+    <a href="auth2">Autherise From 2 Mixed</a>
+    <a href="logout">Logout</a>
+
+<div style="background: linear-gradient(to top left, blue,red);color: white; height: 500px; width: 100%;">
+    
+<section id="login">
+    <form method="post">
+        {%csrf_token%}
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Login"></td>
+            </tr>
+    
+        </table>
+    
+     </form>   
+</section>
+</div>
+{%endif%}

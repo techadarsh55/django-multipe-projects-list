@@ -1,0 +1,57 @@
+{% extends 'master.html' %}
+{%block body%}
+<h1>GET METHDOS</h1>
+<form action="adduser1" method="get">
+    <table>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="id"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td><input type="text" name="Contact"></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+</form>
+
+<h1>POST METHDOS</h1>
+<form action="adduser2" method="post">
+    {%csrf_token%}
+    <table>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="id"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td>Conatct</td>
+            <td><input type="text" name="contact"></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+</form>
+{%endblock%}

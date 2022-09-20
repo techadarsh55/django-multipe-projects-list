@@ -1,0 +1,16 @@
+<h2>Django Employee Registration Form</h2>
+
+<form method="post" action="saveemp">
+    {%csrf_token%}
+    <table>
+        {%for i in form %}
+        <tr>
+            <td>{{i.first_name}}</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="SAVE"></td>
+            <td><input type="reset" value="RESET"></td>
+        </tr>
+        {%endform%}
+    </table>
+</form>

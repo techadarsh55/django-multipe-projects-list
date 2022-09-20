@@ -1,0 +1,32 @@
+<div style="background-color: darkgrey;top: 0; left:0;position: fixed;width: 100%;"><center><h2>CV Reviews</h2></center></div>
+<hr>
+
+<div style="background-color: rgb(223, 128, 128); width: 100%;padding-top: 30px;">
+    {% for i in ul%}
+    <h1>Employee ID: {{i.id}}</h1>
+    <div style="background-color: white;padding:1px;">
+        <hr>
+        <h3>{{i.name}}</h3>
+        <p>{{i.email}}</p>
+        <p>{{i.contact}}</p>
+        <br>
+        <h3>Skills:</h3>
+        <hr>
+        <p>{{i.skill}}</p>
+        <br>
+        <h3>Experiance</h3>
+        <hr>
+        <p>{{i.exp}}</p>
+        <h3>Marks</h3>
+        <hr>
+        <p>HSC : {{i.hsc}}</p>
+        <p>SSC : {{i.ssc}}</h3>
+        <p>Graduatation : {{i.gradue}}</p>
+        <h3>Hobbys</h3>
+        <hr>
+        <p>{{i.hobby}}</p>    
+    </div>
+
+    {% endfor %}
+</div>
+<hr>

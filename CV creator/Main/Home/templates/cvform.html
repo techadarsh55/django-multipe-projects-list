@@ -1,0 +1,46 @@
+<form method="post">
+    {%csrf_token%}
+    <p>Registration Form</p>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="name" required></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" name="email" required></td>
+        </tr>
+        <tr>
+            <td>Conatct:</td>
+            <td><input type="text" name="contact" required></td>
+        </tr>
+        <tr>
+            <td>Skill:</td>
+            <td><input type="text" name="skill" required></td>
+        </tr>
+        <tr>
+            <td>Experiance:</td>
+            <td><input type="text" name="exp" required></td>
+        </tr>
+        <tr>
+            <td>HSC:</td>
+            <td><input type="text" name="hsc" required></td>
+        </tr>
+        <tr>
+            <td>SSC:</td>
+            <td><input type="text" name="ssc" required></td>
+        </tr>
+        <tr>
+            <td>Graduate:</td>
+            <td><input type="text" name="gradue" required></td>
+        </tr>
+        <tr>
+            <td>Hobby:</td>
+            <td><input type="text" name="hobby"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="submit"></td>
+            <td><input type="reset" value="reset"></td>
+        </tr>
+    </table>
+</form>

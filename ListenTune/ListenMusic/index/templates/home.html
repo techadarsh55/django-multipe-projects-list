@@ -1,0 +1,19 @@
+{% include 'navbar.html'%}
+
+
+<h2>New User</h2>
+<h2><a href="adduser2">Register Here..</a></h2>
+<h2>Already have account</h2>
+<h2><a href="login">Login</a></h2>
+<hr>
+{% if user.is_authenticated %}
+<h2><a href="logout">Logout</a></h2>
+<h2><a href="user_register">Pitent Appointment</a></h2>
+<h2><a href="user_list">Total Appointment</a></h2>
+
+<h2><a href="userreg">Register1</a></h2>
+<h2><a href="adduser1">Add_Auth2</a></h2>
+{% endif %}
+
+{%include 'footer.html'%}
+

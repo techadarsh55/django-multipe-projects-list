@@ -1,0 +1,12 @@
+{%load static%}
+<link rel="stylesheet" href="{%static 'css/style.css'%}">
+<h1 id="navlogo">Django Web templates service</h1>
+{%block slideinfo%}
+{%endblock%}
+<div class="main">
+{% include 'navbar.html' %}   
+{%block body%}
+<h1>Welcome to home</h1>
+{%endblock%}
+{% include 'footer.html'%}
+</div>

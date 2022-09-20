@@ -1,0 +1,12 @@
+{% extends 'home.html'%}
+{%block body%}
+
+<form method="post" style="padding: 30px;">
+    {%csrf_token%}
+    <table border="1" cellspacing="10" class="table-info">
+        {{form.as_table}}
+    </table>
+</form>
+
+
+{%endblock%}

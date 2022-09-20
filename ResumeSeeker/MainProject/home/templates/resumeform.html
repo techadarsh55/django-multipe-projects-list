@@ -1,0 +1,16 @@
+{% extends 'home.html'%}
+{%block body%}
+
+<form method="post" style="padding: 30px;">
+    {%csrf_token%}
+    <table border="1" cellspacing="10" class="">
+        {{form.as_table}}
+        <tr>
+            <td><input type="submit" value="Save"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+</form>
+
+
+{%endblock%}

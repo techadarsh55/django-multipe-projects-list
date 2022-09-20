@@ -1,0 +1,27 @@
+{% include 'navbar.html'%}
+{%block body%}
+<div class="container">
+    <div class="row align-items-center">
+        <form method="post" action="savedata">
+            {%csrf_token%}
+            <table>
+                
+                <tr>
+                    <td><h5>{{form.as_p}}</h5></td>
+                </tr>
+               
+                <tr>
+                    <td>
+                        <input type="submit" value="ADD"> 
+                        <input type="reset" value="CLEAR"> 
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+
+
+{%endblock%}
+{% include 'footer.html' %}

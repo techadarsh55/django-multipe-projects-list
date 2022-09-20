@@ -1,0 +1,35 @@
+<h1>Auth User Link</h1>
+<h2><a href="adduser1">auth_user</a></h2>
+<h2><a href="adduser2">Auth User Form2</a></h2>
+<h2><a href="adduser3">Auth User Form3</a></h2>
+<h2><a href="adduser4">Auth User Form4</a></h2>
+<h2><a href="adduser5">Auth User Form5</a></h2>
+<h2><a href="login">Login</a></h2>
+<hr>
+{%if user.is_authenticated%}
+<h1> Basic ORM Operations </h1>
+
+<h2><a href="logout">Logout</a></h2>
+<h2><a href="empr">EmpRegister</a></h2>
+<h2><a href="empq">EmpQualification</a></h2>
+
+<h2><a href="eqlist">EmpQualificationList</a></h2>
+<hr>
+<h2>One to one to relation</h2>
+<h2><a href="empq2">EmpQualification</a></h2>
+<h2><a href="eqlist2">EmpQualificationList</a></h2>
+<hr>
+<h2>Full form</h2>
+<h2><a href="empq3">EmpQualification</a></h2>
+<h2><a href="eqlist3">EmpQualificationList</a></h2>
+
+
+<h2>Many To Many realation</h2>
+
+<h2><a href="singer">Add Singer</a></h2>
+<h2><a href="songs">Add Songs</a></h2>
+<h2><a href="singer_list">Singer List</a></h2>
+
+<h2><a href="FSongs">Add Singer2</a></h2>
+
+{%endif%}

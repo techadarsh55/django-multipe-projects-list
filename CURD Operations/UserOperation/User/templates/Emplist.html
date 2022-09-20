@@ -1,0 +1,32 @@
+<h2><center>Employee List</center></h2>
+
+<table border="1" cellspacing="5" style="text-align: center;justify-content: center;">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>City</th>
+        <th>Address</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th colspan="2">Action</th>
+    </tr>
+    {% for i in data %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.contact}}</td>
+        <td>{{i.city}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.username}}</td>
+        <td>{{i.password}}</td>
+        <td>
+            <a href="delete/{{i.id}}">Delete</a>
+            <a href="edit/{{i.id}}">Update</a>
+        </td>
+    </tr>
+    {%endfor%}
+
+</table>

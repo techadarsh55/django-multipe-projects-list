@@ -1,0 +1,25 @@
+<table border="1" cellspacing="10" >
+    <tr>
+        <td>ID</td>
+        <td>Nanme</td>
+        <td>Eamil</td>
+        <td>Contact</td>
+        <td>City</td>
+        <td colspan="3">Action</td>
+    </tr>
+
+    
+        {% for i  in object_list%}
+        <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.Name}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Contact}}</td>
+        <td>{{i.city}}</td>
+        <td><a href="d1/{{i.id}}">Delete 1</a></td>
+        <td><a href="d2/{{i.id}}">Delete 2</a></td>
+        <td><a href="e1/{{i.id}}">Edit</a></td>
+    </tr>
+        {%endfor%}
+
+</table>

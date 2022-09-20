@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ -->
+    <title>CV Review</title>
+  </head>
+  <body>
+ 
+
+
+{% if resumes %}
+<div>
+    <button style="background-color: cornflowerblue; width: 80px;height: 29px; font-size: large;"><a style="color:ivory; " href="http://127.0.0.1:8000/rlist">Back</a></button>
+    <button style="background-color: rgb(88, 240, 121); width: 80px;height: 29px; font-size: large;"><a style="color:ivory; " href="http://127.0.0.1:8000/edit/{{resumes.id}}">Update</a></button>
+    <button style="background-color: rgb(250, 126, 89); width: 80px;height: 29px; font-size: large;"><a style="color:ivory; " href="http://127.0.0.1:8000/delete/{{resumes.id}}">Remove</a></button>
+
+</div>
+
+
+
+<h1><center>CV/Resume Review</center></h1>
+<hr>
+<div style="padding:100px ;">
+    <div class="row" style="background-color: #3c5e75; display: flex; color: antiquewhite; font-family: Arial, Helvetica, sans-serif; padding: 10px;">
+        <div>
+            <img src="../static/bearded-teenage-boy-portrait-profile-male-vector-34014850.jpg" style="border-radius: 50%; width: 120px;">
+        </div>
+        <div style="padding-left: 50px;">
+            <h2 style="font-size: 35px;">{{resumes.FirstName}} {{resumes.LastName}}</h2>
+        </div>
+    </div>
+
+    <div style="background-color: antiquewhite; font-family: Arial, Helvetica, sans-serif;">
+        <div class="row" style="display: flex; padding: 10px;">
+        <div>
+            
+            <table>
+                <tr>
+                    <th>Personal Info<hr></th>
+                    
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td>{{resumes.Email}}</td>
+                </tr>
+                <tr>
+                    <td>Contact :</td>
+                    <td>+91-{{resumes.Contact}}</td>
+                </tr>
+                <tr>
+                    <td>Address :</td>
+                    <td>{{resumes.Address}}</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn :</td>
+                    <td>{{resumes.Linkedin}}</td>
+                </tr>
+                <tr>
+                    <td>Github :</td>
+                    <td>{{resumes.Github}}</td>
+                </tr>
+            </table>
+        </div>
+        <div style="padding-left:50px; margin-top:-20px;">
+            <h4>Language: <hr></h4>
+            <h5>{{resumes.Lang}}</h5>
+        </div>
+    </div>
+    </div>
+
+    <div style="background-color: antiquewhite; font-family: Arial, Helvetica, sans-serif;">
+        <table>
+            <tr>
+                <th style="padding-left: 20px; width: 30%;">Key Skills <hr></th>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left: 20px; width:70%"><li>{{resumes.skill}}</li><br></td><br>
+            </tr>
+            <tr>
+                <th style="padding-left: 20px; width: 30%;">Educations <hr></th>
+            </tr>
+          
+            <tr>
+                <td></td>
+                <td style="padding-left: 20px; width:70%"><li>SSC :{{resumes.ssc}}%</li></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left: 20px; width:70%"><li>HSC :{{resumes.hsc}}%</li></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left: 20px; width:70%"><li>Graduation :{{resumes.ssc}}%</li></td>
+            </tr>
+            <tr>
+                <th style="padding-left: 20px; width: 30%;">Certifications<hr></th>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left: 20px; width:70%"><li>{{resumes.certification}}</li></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+
+{% else %}
+<h2>No Data</h2>
+{% endif %}
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   </body>
+</html>

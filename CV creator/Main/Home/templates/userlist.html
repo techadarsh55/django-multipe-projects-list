@@ -1,0 +1,39 @@
+<div style="padding: 50px; text-align: center;font-size: 25px;font-family:Arial, Helvetica, sans-serif;">
+    <h2>Employee Details</h2>
+    <table border="2" cellspaining="10">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Contact</td>
+            <td>Skill</td>
+            <td>Experiance</td>
+            <td>HSC</td>
+            <td>SSC</td>
+            <td>Graduatation</td>
+            <td>Hobbies</td>
+            <td>Action</td>
+        </tr>
+        
+        {%for i in ul1%}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.contact}}</td>
+            <td>{{i.skill}}</td>
+            <td>{{i.Experiance}}</td>
+            <td>{{i.hsc}}</td>
+            <td>{{i.ssc}}</td>
+            <td>{{i.gradue}}</td>
+            <td>{{i.hobby}}</td>
+            <td><a href="delete_emp?id={{i.id}}"><button>Delete</button></a>
+                <a href="edit_emp/{{i.id}}"><button>Edit</button></a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>

@@ -1,0 +1,29 @@
+<body>
+<span ><h2 style="background: linear-gradient(to top right,red,rgb(108, 16, 212));color:white; text-align: center; width: 100%;">Welcome To Mysql Client Tutorial</h2></span>
+<span style="font-size: 25px;">
+    <a href="/">Home</a>
+    <a href="reg">Register</a>
+    <a href="login">Login</a>  
+    
+</span>
+<section id="/">
+    <div style="background: linear-gradient(to left, blue,red); height: 500px;color:white; width: 100%;">
+        <form method="post">
+            {%csrf_token%}
+            <fieldset>
+                <legend>Autherise Register table</legend>
+                <table>
+                    {{form.as_table}}
+                    <tr>
+                        <td><input type="submit" value="Save"></td>
+                        <td><input type="reset" value="Reset"></td>
+                    </tr>
+                </table>
+    
+            </fieldset>
+        </form>
+        
+    </div>
+</section>
+
+</body>

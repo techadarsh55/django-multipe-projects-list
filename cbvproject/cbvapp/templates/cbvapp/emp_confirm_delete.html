@@ -1,0 +1,5 @@
+<h2>Please delete the <span style="color:red">{{ object.id }}</span></h2>
+<form method="post">
+    {%csrf_token%}
+    <input type="submit" value="Delete">
+</form>

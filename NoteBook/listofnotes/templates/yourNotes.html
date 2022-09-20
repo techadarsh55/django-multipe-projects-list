@@ -1,0 +1,25 @@
+{%include 'navbar.html'%}
+{%block body%}
+    <div class="container">
+        <div class="row d-inline-flex">
+            <div class="col-4 p-5">
+                {% for i in list %}
+                <div class="card" style="width: 700px; border-radius: 1 5px;">
+                    <div class="card-body">
+                      <h5 class="card-title text-capitalize text-dark">{{i.id}}</h5>
+                      <h5 class="card-title text-capitalize text-dark">{{i.title}}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted text-uppercase disabled">{{i.date_create}}</h6>
+                      <p class="card-text">{{i.description}}</p>
+                      <p class="card-text">{{i.user}}</p>
+                      <p class="card-text">{{i.user_id}}</p>
+                      <button type="button" class="btn btn-success"><a href="editnote/{{i.id}}">Edit</a></button>
+                      <button type="button" class="btn btn-danger"><a href="deletenote/{{i.id}}">Delete</a></button>
+                    </div>
+                  </div>
+                  <br>
+                  {%endfor%}
+            </div>
+        </div>
+    </div>
+{%endblock%}
+{%include 'footer.html'%}
